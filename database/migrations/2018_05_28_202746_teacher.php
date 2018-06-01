@@ -13,7 +13,15 @@ class Teacher extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('teachers',function($table){
+
+       $table->increments($column='teacher_idd',$primary=true);
+       $table->string($column='teacher_name',$length=100);
+       $table->string($column='designation',$length=15);
+       $table->string($coloumn='thesis_students',$length=100);
+       $table->Integer($column='age',$auto_increment=false,$unsigned=true );
+       $table->timestamps();
+     });
     }
 
     /**
@@ -23,6 +31,6 @@ class Teacher extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('teachers');
     }
 }
