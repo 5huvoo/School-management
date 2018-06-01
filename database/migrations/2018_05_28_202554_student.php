@@ -20,7 +20,7 @@ class Student extends Migration
    $table->string($column='depertment',$length=20);
    $table->string($column='blood_group',$length=5);
 
-   
+
    $table->string($column='emnail',$length=100);
    $table->string($column='supervisor',$length=100);
   $table-> timestamps();
